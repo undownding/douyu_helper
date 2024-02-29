@@ -36,6 +36,7 @@ def get_glow():
         if glow_res.json()['data']['list']:
             global Own
             try:
+                logger.info(glow_res.json())
                 Own = jsonpath(glow_res.json(), '$..list[?(@.id == 268)].count')[0]
                 logger.info("当前拥有荧光棒%s个,给你喜欢的主播进行赠送吧" % Own)
             except TypeError as e:
