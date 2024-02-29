@@ -67,7 +67,7 @@ def glow_donate(num=1, room_id=12306):
     :param room_id: 房间号
     """
     donate_url = "/japi/prop/donate/mainsite/v1"
-    DATA = "propId=268&propCount=%s&roomId=%s&bizExt={\"yzxq\":{}}" % (num, room_id)
+    DATA = "propId=2358&propCount=%s&roomId=%s&bizExt={\"yzxq\":{}}" % (num, room_id)
     # 背包中含有道具才会进行赠送，否则会报错
     if Bags:
         donate_res = dyreq.request(method="post", path=donate_url, data=DATA)
