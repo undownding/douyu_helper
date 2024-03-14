@@ -6,7 +6,6 @@ on:
       - master
   workflow_dispatch: 
   schedule:
-    - cron: '02 16 * * *'
     - cron: '02 19 * * *'
 
 jobs:
